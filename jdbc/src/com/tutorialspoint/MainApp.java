@@ -19,19 +19,18 @@ public class MainApp {
       studentJDBCTemplate.create("Yeswanth Maram", 23);
 
       System.out.println("------Listing Multiple Records--------" );
-      List<Student> students = studentJDBCTemplate.listStudents();
-      
+      List<Student> students = studentJDBCTemplate.listStudents();    
       for (Student record : students) {
          System.out.print("ID : " + record.getId() );
          System.out.print(", Name : " + record.getName() );
          System.out.println(", Age : " + record.getAge());
       }
 
-      System.out.println("----Updating Record with ID = 2 -----" );
-      studentJDBCTemplate.update(2, 20);
+      System.out.println("----Updating Record with ID = 10 -----" );
+      studentJDBCTemplate.update(10, 20);
 
-      System.out.println("----Listing Record with ID = 2 -----" );
-      Student student = studentJDBCTemplate.getStudent(2);
+      System.out.println("----Listing Record with ID = 10 -----" );
+      Student student = studentJDBCTemplate.getStudent(10);
       System.out.print("ID : " + student.getId() );
       System.out.print(", Name : " + student.getName() );
       System.out.println(", Age : " + student.getAge());
